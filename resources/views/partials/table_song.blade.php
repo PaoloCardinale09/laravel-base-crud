@@ -1,13 +1,10 @@
 <table class="table table-success table-striped">
     <thead>
         <tr>
-          <th scope="col">title</th>
-          <th scope="col">album</th>
-          <th scope="col">author</th>
-          <th scope="col">editor</th>
-          <th scope="col">length</th>
-          <th scope="col">poster</th>
-          <th scope="col">action</th>
+          <th scope="col">Titolo</th>
+          <th scope="col">Album</th>
+          <th scope="col">Autore</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -16,9 +13,6 @@
             <td>{{ $song->title}}</td>
             <td>{{ $song->album}}</td>
             <td>{{ $song->author}}</td>
-            <td>{{ $song->editor}}</td>
-            <td>{{ $song->length}}</td>
-            <td>{{ $song->poster}}</td>
             <td><a href="{{ route('songs.show', $song) }}">dettaglio</a></td>
         </tr>
         @endforeach

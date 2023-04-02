@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="{{ route('songs.index') }}">Songs</span></a>
+          <a class="nav-link" href="{{ route('songs.index') }}">Canzoni</span></a>
         </li>
        
       </ul>

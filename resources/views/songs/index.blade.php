@@ -4,7 +4,9 @@
 
 
 @section('main_content')
- @extends('partials.table_complete')
+
+    @include('partials.table_song')
+
 @endsection
 
 @section('footer')
