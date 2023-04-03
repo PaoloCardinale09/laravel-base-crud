@@ -9,7 +9,7 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-    <div class="container pb-3">
+    <div class="container">
         @include('partials.navbar')
     </div>
 
