@@ -40,12 +40,14 @@ class SongController extends Controller
             'title' => 'required',
             'author' => 'required',
             'editor' => 'required',
-            'length' => 'required'
+            'length' => 'required|date_format:G:i:s'
         ],[
             'title.required' => "Il titolo è obbligatorio",
             'author.required' => "L'autore è obbligatorio",
             'editor.required' => "L' editore è obbligatorio",
-            'length.required' => "La durata è obbligatoria"
+            'length.required' => "La durata è obbligatoria",
+            'length.date_format' => "Il formato della durata non corrisponde ",
+
 
 
         ]);

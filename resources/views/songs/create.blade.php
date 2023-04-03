@@ -41,7 +41,7 @@
 
       <div class="mb-3 col-4">
         <label for="length" class="form-label">Durata</label>
-        <input type="text" class="form-control" id="length" name="length" placeholder="durata (00:00:00)">
+        <input type="text" class="form-control" id="length" name="length" placeholder="durata (hh:mm:ss)">
       </div>
 
 
