@@ -4,6 +4,18 @@
     
 @section('main_content')
 <h2 class="py-5 text-center">Modulo di inserimento nuova canzone</h2>
+
+ 
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <form action=" {{ route('songs.store') }} " method="POST" class="row">
     @csrf
     
