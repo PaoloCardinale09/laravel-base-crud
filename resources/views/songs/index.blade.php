@@ -3,6 +3,12 @@
 @section('page_name', 'index')
 
 
+@section('cdn')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+@endsection
+
+
 @section('main_content')
 <div class="row py-3">
     <form class="col-6 d-flex">
@@ -18,8 +24,6 @@
 
     @include('partials.table_song')
 
+    {{ $songs->links('pagination::bootstrap-5') }}
 @endsection
 
-@section('footer')
-    footer
-@endsection

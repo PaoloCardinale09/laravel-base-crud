@@ -3,6 +3,7 @@
       <img  src="{{ $song->poster }}" class="card-img-top" alt="poster">
       <div class="card-body">
         <h5 class="card-title text-center text-uppercase">{{ $song->title }}</h5>
+        <p class="card-text text-center  "> <strong>ID: </strong>{{ $song->id }}</p>
         <p class="card-text text-center text-uppercase"> <strong>Album: </strong>{{ $song->album }}</p>
         <p class="card-text text-center"><strong>Autore: </strong>{{ $song->author }}</p>
         <p class="card-text text-center"><strong>Editore: </strong>{{ $song->editor }}</p>
