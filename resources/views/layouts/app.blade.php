@@ -19,7 +19,9 @@
     @yield('main_content')
 </main>
 
-    @yield('footer')
+ 
     
+
+    @yield('modal')
 </body>
 </html>
