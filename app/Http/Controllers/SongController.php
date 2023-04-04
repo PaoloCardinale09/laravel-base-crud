@@ -64,10 +64,6 @@ class SongController extends Controller
             'poster.string' => "Il poster deve essere una stringa",
             'poster.max' => "Il poster deve avere massimo 100 caratteri",
             'length.date_format' => "Il formato della durata non corrisponde ",
-
-
-
-
         ]);
 
         $data= $request->all();
@@ -97,9 +93,9 @@ class SongController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Song $song)
     {
-        //
+       return view('songs.edit', compact('song'));
     }
 
     /**
@@ -109,9 +105,37 @@ class SongController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Song $song)
     {
-        //
+        $request->validate([
+            'title' => 'required|string|max:50',
+            'album' => 'string|max:50|nullable',
+            'author' => 'required|string|max:50',
+            'editor' => 'required|string|max:50',
+            'length' => 'required|date_format:H:i:s',
+            'poster' => 'string|max:100|nullable'
+        ],
+        [
+            'title.required' => "Il titolo è obbligatorio",
+            'title.string' => "Il titolo deve essere una stringa",
+            'title.max' => "Il titolo deve avere massimo 50 caratteri",
+            'album.string' => "L'album deve essere una stringa",
+            'album.max' => "L'album deve avere massimo 50 caratteri",
+            'author.string' => "L'autore deve essere una stringa",
+            'author.max' => "L'autore deve avere massimo 50 caratteri",
+            'author.required' => "L'autore è obbligatorio",
+            'editor.required' => "L' editore è obbligatorio",
+            'editor.string' => "L'editore deve essere una stringa",
+            'editor.max' => "L'editore deve avere massimo 50 caratteri",
+            'length.required' => "La durata è obbligatoria",
+            'poster.string' => "Il poster deve essere una stringa",
+            'poster.max' => "Il poster deve avere massimo 100 caratteri",
+            'length.date_format' => "Il formato della durata non corrisponde ",
+        ]);
+
+        $data= $request->all();
+        $song->update($data);
+        return redirect()->route('songs.show', $song);
     }
 
     /**

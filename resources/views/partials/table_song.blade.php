@@ -15,7 +15,14 @@
             <td>{{ $song->title}}</td>
             <td>{{ $song->album}}</td>
             <td>{{ $song->author}}</td>
-            <td><a href="{{ route('songs.show', $song) }}"><i class="bi bi-info-circle"></i></a></td>
+            <td>
+              <a href="{{ route('songs.show', $song) }}">
+                <i class="bi bi-info-circle"></i>
+              </a>
+              <a href="{{ route('songs.edit', $song) }}">
+                <i class="bi bi-pencil"></i>              
+              </a>
+            </td>
         </tr>
         @endforeach
       </tbody>
